@@ -4,11 +4,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
   return (
     <header
-      className="bg-red-300 flex items-center justify-between p-3 bg-opacity-70 bg-clip-padding"
-      style={{ backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}
+      className="fixed w-full top-0 flex items-center justify-between px-4 py-2 bg-opacity-70 bg-clip-padding"
+      style={{ backdropFilter: "blur(3px)", WebkitBackdropFilter: "blur(3px)" }}
     >
       <div>
-        <img src={logo} alt="Logo" className="h-16" />
+        <span className="font-bold text-4xl text-primary">an</span>
       </div>
       <div className="hidden lg:block">
         <nav>
@@ -22,7 +22,7 @@ const Header = () => {
       </div>
 
       <div>
-        <RxHamburgerMenu size={28} className="stroke-1" />
+        <RxHamburgerMenu size={28} className="stroke-1 text-primary" />
       </div>
     </header>
   );

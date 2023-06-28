@@ -1,0 +1,17 @@
+[
+  {
+    "title": "E-commerce App",
+    "imgUrl": "../../src/assets/ecommerceImg.jpg",
+    "description": "A product page with features of an e-commerce app such as an image gallery, lightbox, and shopping cart functionality"
+  },
+  {
+    "title": "Invoice App",
+    "imgUrl": "../../src/assets/invoiceImg.jpg",
+    "description": "An app to create, edit, and delete invoices by opening the sliding side menu"
+  },
+  {
+    "title": "Spotify-Tracker App",
+    "imgUrl": "../../src/assets/symphonyImg.jpg",
+    "description": "This app lets users add songs to their Spotify playlist without having to log onto the platform directly"
+  }
+]
