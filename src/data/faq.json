@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What type of websites do you specialise in?",
+    "answer": "I have built a range of different types of websites and I would say ecommerce is my favourite"
+  },
+  {
+    "question": "What technologies do you work with",
+    "answer": "I use React, Typescript, and Tailwind mostly. Django also, if a backend is required"
+  },
+  {
+    "question": "How much do you charge?",
+    "answer": "It depends on the scope of the project"
+  }
+]

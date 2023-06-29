@@ -1,14 +1,16 @@
+import FAQ from "./components/FAQ";
 import Header from "./components/Header";
-import Intro from "./components/Main";
+import Main from "./components/Main";
 import Projects from "./components/Projects";
 
 function App() {
   return (
     <>
       <Header />
-      <div className="px-4">
-        <Intro />
+      <Main />
+      <div className="px-4 max-w-7xl mx-auto">
         <Projects />
+        <FAQ />
       </div>
     </>
   );
