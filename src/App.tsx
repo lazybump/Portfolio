@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -11,6 +12,7 @@ function App() {
       <div className="px-4 max-w-7xl mx-auto">
         <Projects />
         <FAQ />
+        <Contact />
       </div>
     </>
   );
