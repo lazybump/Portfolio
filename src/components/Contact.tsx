@@ -3,13 +3,13 @@ import { BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 grid md:grid-cols-2">
       <h2 className="mb-6 text-white text-4xl">Get in touch</h2>
-      <p className="mb-12 text-gray-400">
+      <p className="mb-12 text-gray-400 md:col-start-1 max-w-[300px]">
         Drop me a line, give me a call, or send me a message by submitting the
         form.
       </p>
-      <ul className="space-y-8">
+      <ul className="space-y-8 md:col-start-1">
         <li className="flex space-x-6">
           <BsEnvelope className="text-gray-400" size={28} />
           <span className="text-white">myEmail@outlook.com</span>
@@ -20,8 +20,11 @@ const Contact = () => {
         </li>
       </ul>
 
-      <form action="">
-        <ul className="mt-16 space-y-5">
+      <form
+        action=""
+        className="mt-16 md:mt-auto md:col-start-2 md:row-start-1 md:row-span-4"
+      >
+        <ul className="space-y-5">
           <li className="space-y-2">
             <label htmlFor="name-input" className="block text-white">
               Name
