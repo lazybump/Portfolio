@@ -12,7 +12,7 @@ const Projects = () => {
           return (
             <li
               key={index}
-              className="text-white bg-black transition-all duration-500 border-2 border-primary relative"
+              className="text-white bg-black transition-all duration-500 border-2 border-primary"
             >
               <img src={project.imgUrl} alt={project.title} />
               <div className="px-3 py-4 space-y-4">
