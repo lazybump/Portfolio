@@ -20,15 +20,15 @@ const FAQ = () => {
             onClick={() => toggleAccordion(index)}
           >
             <header className="flex justify-between items-center ">
-              <h3 className="text-white w-4/5">{pair.question}</h3>
+              <h3 className="text-white w-4/5 md:text-xl">{pair.question}</h3>
               <FaChevronDown
-                className={`text-gray-400 ${
+                className={`text-gray-400 md:text-xl ${
                   activeIndex === index ? "transform rotate-180" : ""
                 } transition-transform duration-500`}
               />
             </header>
             <p
-              className={`mt-5 text-gray-400 text-sm overflow-hidden transition-all duration-500 ${
+              className={`mt-5 text-gray-400 text-sm md:text-lg overflow-hidden transition-all duration-500 ${
                 index === activeIndex ? "max-h-20" : "max-h-0"
               }`}
             >

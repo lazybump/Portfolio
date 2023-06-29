@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Main />
-      <div className="px-4 max-w-7xl mx-auto">
+      <div className="px-4 md:px-10 max-w-7xl">
         <Projects />
         <FAQ />
         <Contact />
