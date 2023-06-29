@@ -22,36 +22,36 @@ const Contact = () => {
 
       <form
         action=""
-        className="mt-16 md:mt-auto md:col-start-2 md:row-start-1 md:row-span-4"
+        className="mt-16 md:mt-auto md:col-start-2 md:row-start-1 md:row-span-4 text-white"
       >
         <ul className="space-y-5">
           <li className="space-y-2">
-            <label htmlFor="name-input" className="block text-white">
+            <label htmlFor="name-input" className="block">
               Name
             </label>
             <input
               id="name-input"
-              className="text-gray-400 border-2 border-primary bg-inherit w-full h-10 p-3 focus:outline-none"
+              className="border-2 border-primary bg-inherit w-full h-10 p-3 focus:outline-none"
             />
           </li>
           <li className="space-y-2">
-            <label htmlFor="email-input" className="block text-white">
+            <label htmlFor="email-input" className="block">
               Email
             </label>
             <input
               type="email"
               id="email-input"
-              className=" text-gray-400 border-2 border-primary bg-inherit w-full h-10 p-3 focus:outline-none"
+              className="border-2 border-primary bg-inherit w-full h-10 p-3 focus:outline-none"
             />
           </li>
           <li className="space-y-2">
-            <label htmlFor="message-input" className="block text-white">
+            <label htmlFor="message-input" className="block">
               Message
             </label>
             <textarea
               name="message-input"
               id="message-input"
-              className="border-2 border-primary text-gray-400 bg-inherit w-full resize-none h-44 p-3 focus:outline-none"
+              className="border-2 border-primary bg-inherit w-full resize-none h-44 p-3 focus:outline-none"
             ></textarea>
           </li>
         </ul>

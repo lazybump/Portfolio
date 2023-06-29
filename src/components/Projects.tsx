@@ -6,7 +6,9 @@ const Projects = () => {
   return (
     <section className="py-12">
       <h2 className="mb-4 text-white text-4xl">Projects</h2>
-      <p className="mb-12 text-gray-400">Some of the work I've done</p>
+      <p className="mb-12 text-gray-400 md:text-lg">
+        Some of the work I've done
+      </p>
       <ul className="grid gap-8 md:grid-cols-2">
         {projects.map((project, index) => {
           return (
@@ -15,12 +17,12 @@ const Projects = () => {
               className="text-white bg-black transition-all duration-500 border-2 border-primary"
             >
               <img src={project.imgUrl} alt={project.title} />
-              <div className="px-3 py-4 space-y-4">
+              <div className="px-3 py-4 space-y-6">
                 <h3>{project.title}</h3>
                 <p className="text-gray-400">{project.description}</p>
                 <p className="flex items-center justify-between w-1/2">
                   View project
-                  <FiChevronRight />
+                  <FiChevronRight className="md:text-lg" />
                 </p>
               </div>
             </li>
