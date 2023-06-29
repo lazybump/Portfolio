@@ -27,11 +27,3 @@ img {
 ul {
   list-style: none;
 }
-
-section > h2 {
-  @apply text-white text-4xl;
-}
-
-section > p {
-  @apply text-gray-400;
-}
