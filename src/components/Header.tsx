@@ -1,10 +1,9 @@
-import logo from "../assets/navbarLogo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   return (
     <header
-      className="fixed w-full top-0 flex items-center justify-between px-4 py-2 md:px-8 md:h-24 bg-opacity-70 bg-clip-padding"
+      className="fixed z-10 w-full top-0 flex items-center justify-between px-4 py-2 md:px-8 md:h-24 bg-opacity-70 bg-clip-padding"
       style={{ backdropFilter: "blur(3px)", WebkitBackdropFilter: "blur(3px)" }}
     >
       <div>

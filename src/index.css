@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-theme: #09e82e;
+  --primary-theme: #09e85e;
 }
 
 * {
@@ -16,12 +16,8 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #1b1b1b;
   min-height: 100vh;
-}
-
-img {
-  max-width: 100%;
 }
 
 ul {

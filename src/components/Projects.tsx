@@ -1,33 +1,35 @@
-import React, { useEffect, useRef, useState } from "react";
 import projects from "../data/projects.json";
 import { FiChevronRight } from "react-icons/fi";
 
 const Projects = () => {
   return (
     <section className="py-12">
-      <h2 className="mb-4 text-white text-4xl">Projects</h2>
-      <p className="mb-12 text-gray-400 md:text-lg">
+      <h2 className="text-white text-3xl md:text-4xl">Projects</h2>
+      <p className="text-gray-400 mt-4 mb-8 lg:text-lg">
         Some of the work I've done
       </p>
-      <ul className="grid gap-8 md:grid-cols-2">
-        {projects.map((project, index) => {
-          return (
-            <li
-              key={index}
-              className="text-white bg-black transition-all duration-500 border-2 border-primary"
-            >
-              <img src={project.imgUrl} alt={project.title} />
-              <div className="px-3 py-4 space-y-6">
-                <h3>{project.title}</h3>
-                <p className="text-gray-400">{project.description}</p>
-                <p className="flex items-center justify-between w-1/2">
-                  View project
-                  <FiChevronRight className="md:text-lg" />
-                </p>
-              </div>
-            </li>
-          );
-        })}
+
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        {projects.map((project) => (
+          <li
+            key={project.title}
+            className="border-2 border-primary flex flex-col max-w-[280px]"
+          >
+            <img
+              src={project.imgUrl}
+              alt={project.title}
+              className="w-full h-40 object-cover object-top grayscale-[50%]"
+            />
+            <div className="p-4 grow flex flex-col items-start">
+              <h3 className="text-white">{project.title}</h3>
+              <p className="text-gray-400 mt-3 grow">{project.description}</p>
+              <button className="inline-flex items-center text-sm text-white mt-6">
+                View project
+                <FiChevronRight className="ml-2" size={18} />
+              </button>
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   );

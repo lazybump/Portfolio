@@ -57,7 +57,7 @@ const Contact = () => {
         </ul>
         <input
           type="submit"
-          className="bg-white px-2 py-1 rounded mt-6"
+          className="bg-white px-2 py-1 rounded mt-6 text-black"
         ></input>
       </form>
     </section>
