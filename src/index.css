@@ -23,3 +23,8 @@ body {
 ul {
   list-style: none;
 }
+
+/* This is because tailwind doesn't have a utility class for the SVG 'y' property */
+.change-y {
+  y: 45;
+}

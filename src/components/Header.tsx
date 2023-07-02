@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
 import Menu from "./Menu";
 
 interface HeaderProps {
@@ -32,11 +30,40 @@ const Header = ({ navItems, isMenuOpen, setIsMenuOpen }: HeaderProps) => {
             Get in touch
           </button>
         </ul>
+
         <button
-          className="lg:hidden relative burger"
+          className="lg:hidden"
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          <RxHamburgerMenu size={28} className="stroke-1 text-primary" />
+          <svg viewBox="0 0 100 100" width={35}>
+            <rect
+              className={`fill-primary transition-all duration-500 origin-center ${
+                isMenuOpen ? "change-y rotate-45" : ""
+              }`}
+              width={80}
+              height={10}
+              x={10}
+              y={20}
+            ></rect>
+            <rect
+              className={`fill-primary transition-all origin-center ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+              width={80}
+              height={10}
+              x={10}
+              y={45}
+            ></rect>
+            <rect
+              className={`fill-primary transition-all duration-500 origin-center ${
+                isMenuOpen ? "change-y -rotate-45" : ""
+              }`}
+              width={80}
+              height={10}
+              x={10}
+              y={70}
+            ></rect>
+          </svg>
         </button>
       </nav>
       <Menu
