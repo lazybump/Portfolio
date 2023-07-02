@@ -7,23 +7,9 @@ interface MenuProps {
 }
 
 const Menu = ({ isMenuOpen, setIsMenuOpen, navItems }: MenuProps) => {
-  const menuRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (!menuRef.current?.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, []);
-
   return (
     <aside
-      ref={menuRef}
-      className={`bg-overlay border-2 border-red-500 fixed h-screen top-0 right-0 -z-10 w-3/4 max-w-[470px] py-24 text-center transition-all duration-500 ${
+      className={`bg-overlay fixed h-screen top-0 right-0 -z-10 w-3/4 max-w-[470px] py-24 text-center transition-all duration-500 ${
         isMenuOpen ? "" : "translate-x-full"
       }`}
     >
