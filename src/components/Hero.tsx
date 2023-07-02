@@ -1,4 +1,4 @@
-const Main = () => {
+const Hero = () => {
   return (
     <main className="h-screen flex flex-col items-center justify-center space-y-20 text-white">
       <h1 className="text-3xl md:text-4xl">
@@ -11,4 +11,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Hero;

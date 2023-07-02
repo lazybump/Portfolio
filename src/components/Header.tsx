@@ -1,17 +1,22 @@
+import { useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Menu from "./Menu";
 
-const Header = () => {
-  const navItems = ["Projects", "Testimonials", "FAQs"];
+interface HeaderProps {
+  navItems: string[];
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header = ({ navItems, isMenuOpen, setIsMenuOpen }: HeaderProps) => {
   return (
     <header
-      className="fixed z-10 w-full top-0 flex items-center justify-between px-4 py-2 md:px-16 lg:px-28 lg:py-4 bg-opacity-70 bg-clip-padding"
+      className="fixed z-20 w-full top-0 px-4 py-3 md:px-16 lg:px-28 lg:py-4 bg-opacity-70 bg-clip-padding"
       style={{ backdropFilter: "blur(3px)", WebkitBackdropFilter: "blur(3px)" }}
     >
-      <div>
+      <nav className="flex justify-between">
         <span className="font-bold text-4xl text-primary">an</span>
-      </div>
-      <nav className="hidden lg:block w-[500px]">
-        <ul className="text-gray-400 flex justify-between items-center">
+        <ul className="text-gray-400 hidden w-[500px] lg:flex justify-between items-center">
           {navItems.map((item, index) => (
             <li key={index}>
               <a
@@ -27,11 +32,18 @@ const Header = () => {
             Get in touch
           </button>
         </ul>
+        <button
+          className="lg:hidden relative burger"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          <RxHamburgerMenu size={28} className="stroke-1 text-primary" />
+        </button>
       </nav>
-
-      <div className="lg:hidden">
-        <RxHamburgerMenu size={28} className="stroke-1 text-primary" />
-      </div>
+      <Menu
+        navItems={navItems}
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+      />
     </header>
   );
 };
