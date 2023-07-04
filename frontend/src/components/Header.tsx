@@ -14,11 +14,11 @@ const Header = ({ navItems, isMenuOpen, setIsMenuOpen }: HeaderProps) => {
     >
       <nav className="flex justify-between">
         <span className="font-bold text-4xl text-primary">an</span>
-        <ul className="text-gray-400 hidden w-[500px] lg:flex justify-between items-center">
+        <ul className="text-gray-400 hidden w-[400px] lg:flex justify-between items-center">
           {navItems.map((item, index) => (
             <li key={index}>
               <a
-                href="#"
+                href={`#${item}`}
                 className="hover:text-white duration-300 relative group"
               >
                 {item}
@@ -26,9 +26,12 @@ const Header = ({ navItems, isMenuOpen, setIsMenuOpen }: HeaderProps) => {
               </a>
             </li>
           ))}
-          <button className="bg-white text-black px-4 py-2 rounded font-medium text-lg">
+          <a
+            href="#Contact"
+            className="bg-white text-black px-4 py-2 rounded font-medium text-lg"
+          >
             Get in touch
-          </button>
+          </a>
         </ul>
 
         <button
