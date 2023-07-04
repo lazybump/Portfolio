@@ -1,17 +1,17 @@
 [
   {
     "title": "E-commerce Page",
-    "imgUrl": "/src/assets/ecommerceImg.jpg",
+    "imgUrl": "/assets/ecommerceImg.jpg",
     "description": "Product page for an e-commerce shop including an image gallery, lightbox, and shopping cart"
   },
   {
     "title": "Invoice CMS",
-    "imgUrl": "/src/assets/invoiceImg.jpg",
+    "imgUrl": "/assets/invoiceImg.jpg",
     "description": "A dashboard to create invoices, as well as edit, and delete them in a CMS-like app"
   },
   {
     "title": "Spotify-Tracker App",
-    "imgUrl": "/src/assets/symphonyImg.jpg",
+    "imgUrl": "/assets/symphonyImg.jpg",
     "description": "An app to lets user add songs to their Spotify playlist without having to log onto the platform directly"
   }
 ]
