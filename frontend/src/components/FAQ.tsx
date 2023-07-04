@@ -10,7 +10,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-12">
+    <section className="py-16 lg:py-28" id="FAQs">
       <h2 className="text-white text-4xl mb-8">FAQ</h2>
       <ul>
         {faq.map((pair, index) => (

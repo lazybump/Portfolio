@@ -3,7 +3,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 const Projects = () => {
   return (
-    <section className="py-12">
+    <section className="py-16 lg:py-28" id="Projects">
       <h2 className="text-white text-3xl md:text-4xl">Projects</h2>
       <p className="text-gray-400 mt-4 mb-8 lg:text-lg">
         Some of the work I've done
