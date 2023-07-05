@@ -18,15 +18,13 @@ const Contact = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (!formData) return;
-    fetch("api.REDACTED.co.uk/send-email", {
+    fetch("https://api.REDACTED.co.uk/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("RESPONSE:   ", data));
+    });
     setFormData({
       name: "",
       email: "",
