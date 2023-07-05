@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (!formData) return;
-    fetch("http://localhost:3001/send-email", {
+    fetch("api.REDACTED.co.uk/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const Contact = () => {
         </ul>
         <input
           type="submit"
-          className="bg-white px-2 py-1 rounded mt-6 text-black"
+          className="bg-white px-2 py-1 rounded mt-6 text-black cursor-pointer"
         ></input>
       </form>
     </section>
