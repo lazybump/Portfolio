@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BsEnvelope } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
+import { BsCheckCircle } from "react-icons/bs";
+import { BiErrorCircle } from "react-icons/bi";
 
 interface FormType {
   name: string;
@@ -14,10 +16,31 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isValid, setIsValid] = useState<boolean>(false);
+  const [hasError, setHasError] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!formData) return;
+    setIsValid(false);
+    setHasError(false);
+    setIsLoading(true);
+    // Simulate an API call
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        setIsLoading(false);
+        resolve(null); // Don't care about the fulfilled value
+      }, 1000);
+    });
+    // Some validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setIsValid(false);
+      setHasError(true);
+      return;
+    }
+    setHasError(false);
+    setIsValid(true);
+    // Send form data to backend
     fetch("https://api.REDACTED.co.uk/send-email", {
       method: "POST",
       headers: {
@@ -104,11 +127,48 @@ const Contact = () => {
             ></textarea>
           </li>
         </ul>
-        <input
+        <button
           type="submit"
-          className="bg-white px-2 py-1 rounded mt-6 text-black cursor-pointer"
-        ></input>
+          disabled={isLoading}
+          className={`w-20 h-9 border-2 border-primary px-3 py-1 rounded mt-6 text-white hover:bg-green-900 duration-200 cursor-pointer ${
+            isValid && "opacity-75 cursor-auto"
+          }`}
+        >
+          {isLoading ? (
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+              className="animate-spin mx-auto"
+            >
+              <path
+                d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 10.4142 3.16421 10.75 2.75 10.75C2.33579 10.75 2 10.4142 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C9.58579 18 9.25 17.6642 9.25 17.25C9.25 16.8358 9.58579 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5Z"
+                fill="white"
+              />
+            </svg>
+          ) : (
+            "Submit"
+          )}
+        </button>
       </form>
+
+      {/* Success popup */}
+      {isValid && (
+        <div className="bg-primary flex items-center fixed bottom-3 right-3 translate-y-full px-4 py-2 w-52 rounded-xl font-medium slide-in">
+          <BsCheckCircle size={20} strokeWidth={0.3} />
+          <p className="grow text-center">Message sent</p>
+        </div>
+      )}
+
+      {/* Error popup */}
+      {hasError && (
+        <div className="bg-red-300 flex items-center fixed bottom-3 right-3 translate-y-full px-4 py-2 w-56 rounded-xl font-medium slide-in error">
+          <BiErrorCircle size={20} strokeWidth={0.3} />
+          <p className="grow text-center">Incomplete fields</p>
+        </div>
+      )}
     </section>
   );
 };

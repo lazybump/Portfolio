@@ -32,3 +32,38 @@ ul {
 .change-y {
   y: 45;
 }
+
+/* This is for the contact form success/error message */
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.error {
+  animation: shake 0.5s ease-out forwards;
+}
+
+@keyframes shake {
+  25% {
+    transform: translate(2px);
+  }
+  50% {
+    transform: translate(-2px);
+  }
+  75% {
+    transform: translate(2px);
+  }
+  100% {
+    transform: translate(-2px);
+  }
+}
