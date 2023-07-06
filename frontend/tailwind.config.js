@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary-theme)",
+        background: "var(--background-theme)",
         overlay: "rgba(27, 27, 27, .95)",
       },
       fontFamily: {
