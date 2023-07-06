@@ -5,7 +5,8 @@ const Hero = () => {
         I&apos;m <span className="text-primary font-bold">REDACTED</span>
       </h1>
       <p className="text-2xl text-center max-w-2xl">
-        A Web Developer specialising in creating rich user experiences
+        A web developer focused on building sites that drive results for
+        businesses
       </p>
     </main>
   );
