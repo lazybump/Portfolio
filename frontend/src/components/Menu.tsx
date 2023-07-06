@@ -15,8 +15,12 @@ const Menu = ({ isMenuOpen, setIsMenuOpen, navItems }: MenuProps) => {
     >
       <ul className="space-y-8">
         {navItems.map((item, index) => (
-          <li key={index} className="text-gray-400">
-            <a href={`#${item}`} onClick={() => setIsMenuOpen(false)}>
+          <li key={index}>
+            <a
+              href={`#${item}`}
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-400 hover:text-white duration-300"
+            >
               {item}
             </a>
           </li>
@@ -24,7 +28,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen, navItems }: MenuProps) => {
         <li className="px-2">
           <a
             href="#Contact"
-            className="bg-white block text-black px-4 py-2 rounded font-medium text-lg"
+            className="bg-white block text-black px-4 py-2 rounded font-medium text-lg hover:text-green-500 duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
             Get in touch
