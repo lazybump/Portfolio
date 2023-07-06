@@ -25,10 +25,13 @@ const Projects = () => {
               <div className="p-4 grow flex flex-col items-start">
                 <h3 className="text-white">{project.title}</h3>
                 <p className="text-gray-400 mt-3 grow">{project.description}</p>
-                <button className="inline-flex items-center text-sm text-white mt-6">
+                <a
+                  href={project.siteUrl}
+                  className="inline-flex items-center text-sm text-white mt-6 hover:text-primary duration-200"
+                >
                   View project
                   <FiChevronRight className="ml-2" size={18} />
-                </button>
+                </a>
               </div>
             </li>
           </div>
