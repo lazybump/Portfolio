@@ -41,14 +41,14 @@ const Contact = () => {
     }
     setHasError(false);
     setIsValid(true);
-    // Send form data to backend
-    fetch("https://api.REDACTED.co.uk/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    // Send form data to backend    (link no longer exists, so commenting this part out)
+    // fetch("#", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(formData),
+    // });
     setFormData({
       name: "",
       email: "",
@@ -76,11 +76,11 @@ const Contact = () => {
       <ul className="space-y-8 md:col-start-1">
         <li className="flex space-x-6">
           <BsEnvelope className="text-gray-400" size={28} />
-          <span className="text-white">contact@REDACTED.co.uk</span>
+          <span className="text-white">dummy@email.co.uk</span>
         </li>
         <li className="flex space-x-6">
           <BsTelephone className="text-gray-400" size={28} />
-          <span className="text-white">REDACTED</span>
+          <span className="text-white">+0123456789</span>
         </li>
       </ul>
 

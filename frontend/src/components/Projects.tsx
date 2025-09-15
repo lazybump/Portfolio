@@ -1,4 +1,4 @@
-import projects from "../data/projects.json";
+import data from "../data.json";
 import { FiChevronRight } from "react-icons/fi";
 
 const Projects = () => {
@@ -10,13 +10,10 @@ const Projects = () => {
       </p>
 
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-        {projects.map((project) => (
-          <div className="relative">
+        {data.projects.map((project) => (
+          <li className="relative" key={project.id}>
             <div className="absolute inset-0 border-4 border-primary blur-sm"></div>
-            <li
-              key={project.title}
-              className="border-2 border-primary flex flex-col max-w-[280px] relative h-full bg-background"
-            >
+            <div className="border-2 border-primary flex flex-col max-w-[280px] relative h-full bg-background">
               <img
                 src={project.imgUrl}
                 alt={project.title}
@@ -33,8 +30,8 @@ const Projects = () => {
                   <FiChevronRight className="ml-2" size={18} />
                 </a>
               </div>
-            </li>
-          </div>
+            </div>
+          </li>
         ))}
       </ul>
     </section>

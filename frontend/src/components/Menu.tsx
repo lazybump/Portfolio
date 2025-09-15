@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 interface MenuProps {
   isMenuOpen: boolean;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,8 +12,8 @@ const Menu = ({ isMenuOpen, setIsMenuOpen, navItems }: MenuProps) => {
       }`}
     >
       <ul className="space-y-8">
-        {navItems.map((item, index) => (
-          <li key={index}>
+        {navItems.map((item) => (
+          <li key={item}>
             <a
               href={`#${item}`}
               onClick={() => setIsMenuOpen(false)}

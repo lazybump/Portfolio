@@ -4,11 +4,10 @@ const Hero = () => {
   return (
     <main className="h-screen w-5/6 mx-auto flex flex-col items-center justify-center space-y-20 text-white">
       <h1 className="text-3xl md:text-4xl">
-        I&apos;m <span className="text-primary font-bold">REDACTED</span>
+        <span className="text-primary font-bold">Software Developer</span>
       </h1>
       <p className="text-2xl text-center max-w-2xl">
-        A web developer focused on building sites that drive results for
-        businesses
+        Looking to pursue a career in web development
       </p>
       <a
         href="https://github.com/lazybump?tab=repositories"

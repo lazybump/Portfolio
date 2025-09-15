@@ -1,22 +1,20 @@
+import { useState } from "react";
 import Menu from "./Menu";
 
-interface HeaderProps {
-  navItems: string[];
-  isMenuOpen: boolean;
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navItems = ["Projects", "FAQs"];
 
-const Header = ({ navItems, isMenuOpen, setIsMenuOpen }: HeaderProps) => {
   return (
     <header
       className="fixed z-20 w-full top-0 px-4 py-3 md:px-16 lg:px-28 lg:py-4 bg-opacity-70 bg-clip-padding"
       style={{ backdropFilter: "blur(3px)", WebkitBackdropFilter: "blur(3px)" }}
     >
       <nav className="flex justify-between">
-        <span className="font-bold text-4xl text-primary">an</span>
+        <span className="font-bold text-4xl text-primary"></span>
         <ul className="text-gray-400 hidden w-[400px] lg:flex justify-between items-center">
-          {navItems.map((item, index) => (
-            <li key={index}>
+          {navItems.map((item) => (
+            <li key={item}>
               <a
                 href={`#${item}`}
                 className="hover:text-white duration-300 relative group"

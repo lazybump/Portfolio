@@ -1,0 +1,42 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-commerce Page",
+      "imgUrl": "/assets/ecommerceImg.jpg",
+      "description": "Product page for an e-commerce shop including an image gallery, lightbox, and shopping cart",
+      "siteUrl": "https://ecommerce-sneakers-page.netlify.app/"
+    },
+    {
+      "id": "2",
+      "title": "Product Widgets",
+      "imgUrl": "/assets/widgetsImg.jpg",
+      "description": "Interactive widgets for different products. Users can tweak their settings, as well as update their profile",
+      "siteUrl": "https://product-widgets.netlify.app/"
+    },
+    {
+      "id": "3",
+      "title": "Toast Notifications",
+      "imgUrl": "/assets/toastsImg.jpg",
+      "description": "A small project to mimic toast notifications. Each notification disappears after 5 seconds or upon click.",
+      "siteUrl": "https://toast-notifications-app.netlify.app/"
+    }
+  ],
+  "faq": [
+    {
+      "id": "1",
+      "question": "What experience do you have in software development?",
+      "answer": "I've been coding on and off for a couple years, predominantly in the frontend using tools like React, TypeScript, and Tailwind quite frequently. I've also picked up a bunch of other technologies as and when needed."
+    },
+    {
+      "id": "2",
+      "question": "What do you enjoy about coding?",
+      "answer": "The iteration. I have a background in video editing and it feels very familiar in that sense - constant refining and polishing to get things just right."
+    },
+    {
+      "id": "3",
+      "question": "What are you looking for?",
+      "answer": "Ideally, an apprenticeship where I can hit the ground running, as well as grow into the role and become a seasoned developer down the line."
+    }
+  ]
+}
