@@ -7,7 +7,7 @@ const Hero = () => {
         <span className="text-primary font-bold">Software Developer</span>
       </h1>
       <p className="text-2xl text-center max-w-2xl">
-        Looking to pursue a career in web development
+        Looking to pursue a career in software development
       </p>
       <a
         href="https://github.com/lazybump?tab=repositories"
